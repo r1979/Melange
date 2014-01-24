@@ -31,12 +31,12 @@ public:
         nDefaultPort = 1986;
         nRPCPort = 1987;
         bnProofOfWorkLimit = CBigNum(~uint256(0) >> 20);
-        nSubsidyHalvingInterval = 10000;
+        nSubsidyHalvingInterval = 20000;
 
         // Build the genesis block. Note that the output of the genesis coinbase cannot
         // be spent as it did not originally exist in the database.
   
-        const char* pszTimestamp = "The Spice Must Flow!";
+        const char* pszTimestamp = "The Spice Must Flow";
         CTransaction txNew;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
@@ -47,24 +47,24 @@ public:
         genesis.hashPrevBlock = 0;
         genesis.hashMerkleRoot = genesis.BuildMerkleTree();
         genesis.nVersion = 1;
-        genesis.nTime    = 1390586934;
+        genesis.nTime    = 1390586966;
         genesis.nBits    = 0x1e0fffff;
-        genesis.nNonce   = 0;
+        genesis.nNonce   = 1389710;
         
         //// debug print
         hashGenesisBlock = genesis.GetHash();
-        while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
-            if (++genesis.nNonce==0) break;
-            hashGenesisBlock = genesis.GetHash();
-        }
+        //while (hashGenesisBlock > bnProofOfWorkLimit.getuint256()){
+        //    if (++genesis.nNonce==0) break;
+        //    hashGenesisBlock = genesis.GetHash();
+        //}
 
         printf("%s\n", hashGenesisBlock.ToString().c_str());
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         printf("%x\n", bnProofOfWorkLimit.GetCompact());
         genesis.print();
                 
-        assert(hashGenesisBlock == uint256("0x"));
-        assert(genesis.hashMerkleRoot == uint256("0x"));
+        assert(hashGenesisBlock == uint256("0x00000ab022d8be531fe587e287eaaf8996b14210f4bc8b84062cbaecedcc079a"));
+        assert(genesis.hashMerkleRoot == uint256("0xb92e35d5a7cf7e93327e5a5e8fc0dfee3a7e0ddb2b2b8f77836aa2519ed7541a"));
 
         vSeeds.push_back(CDNSSeedData("andarazoroflove.org", "andarazoroflove.org"));
    
@@ -101,7 +101,7 @@ protected:
 static CMainParams mainParams;
 
 
-//
+
 // Testnet (v3)
 //
 class CTestNetParams : public CMainParams {
@@ -132,7 +132,7 @@ public:
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
         
-        assert(hashGenesisBlock == uint256("0x00000015f9fb4c1c9cc55ad08b6ec47fcce2b00bc482a2c48914ab6506daf439"));
+        //assert(hashGenesisBlock == uint256("0x00000015f9fb4c1c9cc55ad08b6ec47fcce2b00bc482a2c48914ab6506daf439"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -178,7 +178,7 @@ public:
         printf("%s\n", genesis.hashMerkleRoot.ToString().c_str());
         genesis.print();
 
-        assert(hashGenesisBlock == uint256("0x6620ff0f4b001bb6c6999d85a61f406a3b213a4ed0364d1b10a46596fcb09785"));
+        //assert(hashGenesisBlock == uint256("0x6620ff0f4b001bb6c6999d85a61f406a3b213a4ed0364d1b10a46596fcb09785"));
 
         vSeeds.clear();  // Regtest mode doesn't have any DNS seeds.
 

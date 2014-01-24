@@ -1,25 +1,37 @@
-Spice integration/staging tree
-==================================
+Melange [SPICE]
 
-www.spice.org
+Skein+SHA2 Proof of Work
 
-Copyright (c) 2009-2013 Bitcoin Developers,
-Copyright (c) 2013 Spice Developers
+Maximum of 1,000,000 total Coins
 
-What is Spice?
------------------
+18 Coins Per Block
 
-Spice is an experimental new digital currency that enables instant payments to
-anyone, anywhere in the world. Spice uses peer-to-peer technology to operate
-with no central authority: managing transactions and issuing money are carried
-out collectively by the network. Spice is also the name of the open source
-software which enables the use of this currency.
+4 Minute Block Targets
 
-For more information, as well as an immediately useable, binary version of
-the Spice client sofware, see http://www.spice.org/
+8 Block Difficulty Retarget Window
 
-License
--------
+Halving at 20,000 Block Intervals
 
-Spice is released under the terms of the MIT license. See `COPYING` for more
-information or see http://opensource.org/licenses/MIT.
+Minimal Reward of .001 Coin
+
+Default P2P Port: 1986
+
+Default RPC Port: 1987
+
+Console based mining via 'minespice true'
+
+Addresses begin with 'M' / Public Key 50
+
+QR Code Support / LevelDB Support
+
+----------------------------------------
+
+CHANGELOG
+
+Version 0.9.0-Herbert (inital release). A tribute to Frank Herbert, now you can mine spice!
+
+
+
+
+
+
