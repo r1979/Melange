@@ -24,6 +24,8 @@ Addresses begin with 'M' / Public Key 50
 
 QR Code Support / LevelDB Support
 
+%appdata%\spice\spice.conf
+
 ----------------------------------------
 
 CHANGELOG
