@@ -26,7 +26,7 @@ QR Code Support / LevelDB Support
 
 %appdata%\spice\spice.conf
 
-----------------------------------------
+-----------------------------------------
 
 CHANGELOG
 
